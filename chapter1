@@ -165,30 +165,18 @@ Window5:Slider({
    end
 })
 Window5:Slider({
-	Text = "HipHeight",
-	Default = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
-	Minimum = 0,
-	Maximum = 50,
+	Text = "JumpHeight",
+	Default = 50,
+	Minimum = 50,
+	Maximum = 200,
 	Callback = function(value)
-		game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end
-})
-
-Window6:Button({
-   Text = "Made by: TRHP .gg/G3KVvt988s",
-   Color = Color3.fromRGB(214, 214, 214),
-   Callback = function()
-   setclipboard("discord.gg/G3KVvt988s")
-   	Library:Notification({
-           Text = "Copied to clipboad",
-           Duration = 3
-})
-   end
 })
 
 Window6:Keybind({
    Text = "Toggle Library",
-   Default = Enum.KeyCode.LeftAlt,
+   Default = Enum.KeyCode.RightAlt,
    Callback = function()
        Library:Toggle()
    end
